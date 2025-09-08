@@ -552,7 +552,8 @@ async def setup():
 def main() -> None:
     """Run the MCP server."""
     asyncio.run(setup())
-    mcp.run()
+    fastmcp_transport = os.environ.get('FASTMCP_TRANSPORT')
+    mcp.run(transport=fastmcp_transport)
 
 
 if __name__ == '__main__':  # pragma: no cover

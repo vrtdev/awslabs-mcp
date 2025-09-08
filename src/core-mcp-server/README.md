@@ -150,6 +150,17 @@ or docker after a successful `docker build -t awslabs/core-mcp-server .`:
   }
 ```
 
+## Running over HTTP
+
+The server runs locally using STDIO by default. To run over HTTP, add the following environment variables to run the server:
+```
+FASTMCP_TRANSPORT='streamable-http'  # or 'http', 'sse'
+FASTMCP_HOST='127.0.0.1'  # default
+FASTMCP_PORT='8000'  # default
+```
+
+This will cause the server to listen on port 8000 on localhost (127.0.0.1).
+
 ## Tools and Resources
 
 The server exposes the following tools through the MCP interface:

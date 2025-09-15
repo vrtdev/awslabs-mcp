@@ -170,6 +170,17 @@ AWS_SESSION_TOKEN=AQoEXAMPLEH4aoAH0gNCAPy...truncated...zrkuWJOgQs8IZZaIv2BXIa2R
 
 NOTE: Your credentials will need to be kept refreshed from your host
 
+## Running over HTTP
+
+The server runs locally using STDIO by default. To run over HTTP, add the following environment variables to run the server:
+```
+FASTMCP_TRANSPORT='streamable-http'  # or 'http', 'sse'
+FASTMCP_HOST='127.0.0.1'  # default
+FASTMCP_PORT='8000'  # default
+```
+
+This will cause the server to listen on port 8000 on localhost (127.0.0.1).
+
 ## Limitations
 
 - Results with `IMAGE` content type are not included in the KB query response.

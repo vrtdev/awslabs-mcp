@@ -190,7 +190,8 @@ async def query_knowledge_bases_tool(
 
 def main():
     """Run the MCP server with CLI argument support."""
-    mcp.run()
+    fastmcp_transport = os.environ.get('FASTMCP_TRANSPORT')
+    mcp.run(transport=fastmcp_transport)
 
 
 if __name__ == '__main__':
